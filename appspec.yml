@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+files:
+  - source: spaceage-ams-ws
+    destination: /tmp/springboot/SpringBootApp
+  - source: scripts
+    destination: /tmp/springboot/SpringBootApp
+hooks:
+  ApplicationStart:
+    - location: /tmp/springboot/SpringBootApp/run.sh
+      timeout: 3600
